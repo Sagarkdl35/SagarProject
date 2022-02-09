@@ -1,0 +1,18 @@
+{% extends 'home.html' %}
+{% block content %}
+<h2>Book This Vehicle</h2>
+<h1>{{today}}</h1>
+<div style="background-color: rgb(255, 140, 0);width: 600px;border-radius:15px">
+    <form action="#" method="POST">
+        {% csrf_token %}
+        <h2>
+            <label for="Starttime">Input the Starting  time :</label> <input type="date" name="Starttime" id="Starttime" min="{{today}}"  max="">
+        </h2>
+        <h2>
+            <label for="Endtime">Input the End time  :</label> <input type="date" name="Endtime" id="Endtime" min=""   max="">
+        </h2>
+        <button type="submit">Book</button>
+     </form>
+</div>
+
+{% endblock %}
